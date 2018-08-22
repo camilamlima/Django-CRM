@@ -17,11 +17,11 @@ class LeadForm(forms.ModelForm):
         self.fields['teams'].required = False
         self.fields['phone'].required = True
         self.fields['first_name'].widget.attrs.update({
-            'placeholder': 'First Name'})
+            'placeholder': 'Primeiro nome'})
         self.fields['last_name'].widget.attrs.update({
-            'placeholder': 'Last Name'})
+            'placeholder': 'Ultimo nome'})
         self.fields['account_name'].widget.attrs.update({
-            'placeholder': 'Account Name'})
+            'placeholder': 'Nome da Conta'})
 
     class Meta:
         model = Lead

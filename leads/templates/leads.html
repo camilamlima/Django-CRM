@@ -13,7 +13,7 @@
       </div>
       <div class="col-md-6">
         <div class="create_new text-right">
-          <a href="{% url 'leads:add_lead'%}"><i class="fa fa-plus"></i> Add New Lead</a>
+          <a href="{% url 'leads:add_lead'%}"><i class="fa fa-plus"></i> Adicionar novo Lead</a>
         </div>
         </div>
       </div>
@@ -27,18 +27,18 @@
 
         <form id="leads_filter" action="" method="POST">
           <div class="card-body ">
-            <div class="card-title">Filters</div>
+            <div class="card-title">Filtros</div>
             <div class="row marl">
               <div class="filter_col col-md-12">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">First Name</label>
-                  <input type="text" class="form-control" placeholder="First Name" name="first_name" value="{{request.POST.first_name}}">
+                  <label for="exampleInputEmail1">Nome</label>
+                  <input type="text" class="form-control" placeholder="Nome" name="Nome" value="{{request.POST.first_name}}">
                 </div>
               </div>
               <div class="filter_col col-md-12">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Last Name</label>
-                  <input type="text" class="form-control" placeholder="Last Name" name="last_name" value="{{request.POST.last_name}}">
+                  <label for="exampleInputEmail1">Sobrenome</label>
+                  <input type="text" class="form-control" placeholder="Sobrenome" name="sobrenome" value="{{request.POST.last_name}}">
                 </div>
               </div>
               <div class="filter_col col-md-12">

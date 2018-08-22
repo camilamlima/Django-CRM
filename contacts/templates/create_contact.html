@@ -19,13 +19,13 @@
         <div class="card">
           <div class="card-body">
           <div class="card-title text-center">
-            CREATE CONTACT
+            Criar Contato
           </div>
             <div class="row marl no-gutters">
               <div class="col-md-6">
                 <div class="filter_col col-md-12">
                   <div class="form-group">
-                    <label for="exampleInputEmail1" class="required">Name{% if contact_form.first_name.field.required %}<span class="error">*</span>{% endif %}</label>
+                    <label for="exampleInputEmail1" class="required">Nome{% if contact_form.first_name.field.required %}<span class="error">*</span>{% endif %}</label>
                     <div class="row">
                       <div class="filter_col col-md-6">
                         {{ contact_form.first_name }}
@@ -74,7 +74,7 @@
               <div class="col-md-6">
                 <div class="filter_col col-md-12">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Address</label>
+                    <label for="exampleInputEmail1">Endereço</label>
                     {{ address_form.address_line }}
                     <span class="error">{{ address_form.address_line.errors }}</span>
                   </div>

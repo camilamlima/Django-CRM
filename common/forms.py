@@ -15,16 +15,16 @@ class BillingAddressForm(forms.ModelForm):
         for field in self.fields.values():
             field.widget.attrs = {"class": "form-control"}
         self.fields['address_line'].widget.attrs.update({
-            'placeholder': 'Address Line'})
+            'placeholder': 'Endereço'})
         self.fields['street'].widget.attrs.update({
-            'placeholder': 'Street'})
+            'placeholder': 'Rua'})
         self.fields['city'].widget.attrs.update({
-            'placeholder': 'City'})
+            'placeholder': 'Cidade'})
         self.fields['state'].widget.attrs.update({
-            'placeholder': 'State'})
+            'placeholder': 'Estado'})
         self.fields['postcode'].widget.attrs.update({
-            'placeholder': 'Postcode'})
-        self.fields["country"].choices = [("", "--Country--"), ] + list(self.fields["country"].choices)[1:]
+            'placeholder': 'CEP'})
+        self.fields["country"].choices = [("", "--Pais--"), ] + list(self.fields["country"].choices)[1:]
 
 
 class ShippingAddressForm(forms.ModelForm):
@@ -37,16 +37,16 @@ class ShippingAddressForm(forms.ModelForm):
         for field in self.fields.values():
             field.widget.attrs = {"class": "form-control"}
         self.fields['address_line'].widget.attrs.update({
-            'placeholder': 'Address Line'})
+            'placeholder': 'Endereço'})
         self.fields['street'].widget.attrs.update({
-            'placeholder': 'Street'})
+            'placeholder': 'Rua'})
         self.fields['city'].widget.attrs.update({
-            'placeholder': 'City'})
+            'placeholder': 'Cidade'})
         self.fields['state'].widget.attrs.update({
-            'placeholder': 'State'})
+            'placeholder': 'Estado'})
         self.fields['postcode'].widget.attrs.update({
-            'placeholder': 'Postcode'})
-        self.fields["country"].choices = [("", "--Country--"), ] + list(self.fields["country"].choices)[1:]
+            'placeholder': 'CEP'})
+        self.fields["country"].choices = [("", "--Pais--"), ] + list(self.fields["country"].choices)[1:]
 
 
 class UserForm(forms.ModelForm):

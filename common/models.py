@@ -29,11 +29,11 @@ class User(AbstractBaseUser, PermissionsMixin):
 
 
 class Address(models.Model):
-    address_line = models.CharField(_("Address"), max_length=255, blank=True, null=True)
-    street = models.CharField(_("Street"), max_length=55, blank=True, null=True)
-    city = models.CharField(_("City"), max_length=255, blank=True, null=True)
-    state = models.CharField(_("State"), max_length=255, blank=True, null=True)
-    postcode = models.CharField(_("Post/Zip-code"), max_length=64, blank=True, null=True)
+    address_line = models.CharField(_("Endereço"), max_length=255, blank=True, null=True)
+    street = models.CharField(_("Rua"), max_length=55, blank=True, null=True)
+    city = models.CharField(_("Cidade"), max_length=255, blank=True, null=True)
+    state = models.CharField(_("Estado"), max_length=255, blank=True, null=True)
+    postcode = models.CharField(_("CEP"), max_length=64, blank=True, null=True)
     country = models.CharField(max_length=3, choices=COUNTRIES, blank=True, null=True)
 
     def __str__(self):

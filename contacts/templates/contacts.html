@@ -9,11 +9,11 @@
     <div class="heading col-md-12">
       <div class="no-gutters row">
         <div class="col-md-6">
-          <h4>Contacts</h4>
+          <h4>Contatos</h4>
         </div>
         <div class="col-md-6">
           <div class="create_new text-right">
-            <a href="{% url 'contacts:add_contact'%}"><i class="fa fa-plus"></i> Add New Contact</a>
+            <a href="{% url 'contacts:add_contact'%}"><i class="fa fa-plus"></i> Adicionar novo contato</a>
           </div>
         </div>
       </div>
@@ -27,13 +27,13 @@
        
         <form id="contacts_filter" action="" method="POST">
           <div class="card-body">
-            <div class="card-title">Filters</div>
+            <div class="card-title">Filtros</div>
             <div class="row marl">
               <div class="filter_col col-md-12">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">ACCOUNTS</label>
+                  <label for="exampleInputEmail1">Conta</label>
                   <select class="form-control" id="id_account" name="account">
-                    <option value="" selected="selected">--Select an Account--</option>
+                    <option value="" selected="selected">--Selecione uma conta--</option>
                     {% for account in accounts %}
                     <option value="{{account.id}}" {%ifequal account.id request.POST.account|add:"0"%} selected {%endifequal%}>{{ account.name }}</option>
                     {% endfor %}
@@ -42,20 +42,20 @@
               </div>
               <div class="filter_col col-md-12">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">NAME</label>
-                  <input type="text" class="form-control" placeholder="First Name" name="first_name" value="{{request.POST.first_name}}">
+                  <label for="exampleInputEmail1">Nome</label>
+                  <input type="text" class="form-control" placeholder="Nome" name="nome" value="{{request.POST.first_name}}">
                 </div>
               </div>
               <div class="filter_col col-md-12">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">CITY</label>
-                  <input type="text" class="form-control" placeholder="City" name="city" value="{{request.POST.city}}">
+                  <label for="exampleInputEmail1">Cidade</label>
+                  <input type="text" class="form-control" placeholder="Cidade" name="cidade" value="{{request.POST.city}}">
                 </div>
               </div>
               <div class="filter_col text-center col-12">
                 <div class="form-group buttons_row">
-                  <button  class="btn btn-primary save" type="submit">Search</button>
-                  <a href="{% url 'contacts:list' %}" class="btn btn-default clear">Clear</a>
+                  <button  class="btn btn-primary save" type="submit">Buscar</button>
+                  <a href="{% url 'contacts:list' %}" class="btn btn-default clear">Limpar</a>
                 </div>
               </div>
             </div>
@@ -72,19 +72,19 @@
         
         <div class="card-body">
         <div class="card-title">
-          List of Contacts
-          <span class="float-right total_count">{% if show_pageitems %} {% show_pageitems %}{% else %}Total Contacts {{contact_obj_list|length}}{% endif %}</span>
+          Lista de Contatos
+          <span class="float-right total_count">{% if show_pageitems %} {% show_pageitems %}{% else %}Total de Contatos {{contact_obj_list|length}}{% endif %}</span>
         </div>
         <div class="table-responsive">
           <table class="table">
             <thead>
               <tr>
                 <th width="5%" >S.no</th>
-                <th width="20%" >Name</th>
-                <th width="20%" >Account</th>
-                <th width="15%" >City</th>
-                <th width="15%" >State</th>
-                <th width="15%" >Actions</th>
+                <th width="20%" >Nome</th>
+                <th width="20%" >Conta</th>
+                <th width="15%" >Cidade</th>
+                <th width="15%" >Estado</th>
+                <th width="15%" >Ação</th>
               </tr>
             </thead>
             <tbody>
@@ -152,7 +152,7 @@
   $('.delete').click(function(e){
     e.preventDefault()
     url = $(this).attr('href')
-    if (!confirm('Are you sure you want to delete?'))
+    if (!confirm('Você tem certeza que quer deletar?'))
       return;
     window.location = $(this).attr('href')
   });
